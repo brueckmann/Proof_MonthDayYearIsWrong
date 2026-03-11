@@ -43,7 +43,7 @@ jobs:
           git pull
           mv mainfile.pdf Proof_MonthDayYearIsWrong.pdf
           git add Proof_MonthDayYearIsWrong.pdf
-          git commit -m "updeted generated PDF article"
+          git commit -m "updated generated PDF article"
           git push
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
