@@ -4,7 +4,11 @@
 % 
 %-----------------------------------------------------------------
 
-\documentclass[12pt,longbibliography,draft]{article}
+\documentclass[12pt,longbibliography]{article}
+
+
+
+
 
 % Packages
 %-----------------------------------------------------------------
@@ -18,17 +22,30 @@
 \usepackage[T1]{fontenc}
 
 % Set type of paper and margins.
-\usepackage[a4paper, margin=2.7cm]{geometry}
+\usepackage[a4paper, margin=2.7cm, % Set the size and margins of the paper
+includehead,
+nomarginpar,% We don't want any margin paragraphs
+textwidth=10cm,% Set \textwidth to 10cm
+headheight=10mm,% Set \headheight to 10mm
+]{geometry}
+
+
+
+
 
 \usepackage{amsmath, amsthm, amsfonts, amssymb}
 
-
 % Generate a PDF with hyperlinks in references.
-\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,breaklinks]{hyperref}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,breaklinks]{hyperref}
+
 
 
 \usepackage{graphicx, xcolor}
 \usepackage{placeins}
+\usepackage{fancyhdr}
+
+
+
 
 % \usepackage{lineno}
 % \linenumbers
@@ -47,6 +64,11 @@
 %\bibliographystyle{plainnat-linked}
 % \bibliographystyle{plain}
 
+
+
+
+
+
 % Shortcuts
 %-----------------------------------------------------------------
 
@@ -63,7 +85,7 @@
 
 
 % Paper title and author
-\title{Why Month Day is not only absurd but also wrong a wrong date format - a proof by contradiction}
+\title{Why the Month Day Format is not only absurd but also a wrong date format -- a proof by contradiction}
 \author{G. Brückmann}
 
 % Date is set automatically unless specified below.
@@ -86,17 +108,31 @@
 
 \begin{document}
 
+% Set the page style to "fancy"...
+\pagestyle{fancy}
+%... then configure it.
+\fancyhead{} % clear all header fields
+\fancyhead[RO,RE]{\textbf{G. Brückmann}}
+\fancyhead[RO,LE]{\textbf{Month Day is wrong}}
+
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{\href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{Link to the most recent version:} \href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{\url{github/brueckmann/Proof_MonthDayYearIsWrong/blob/main/Proof_MonthDayYearIsWrong.pdf}}}
+% Some content:
+
+
+\thispagestyle{fancy}
 \maketitle
 
 \begin{abstract}
-The data above is wrong. This is why.\\ \par
+The date above is wrong. It is not a correct representation of the actual date, which is 2026-03-11, or the 11$^\text{th}$ of March, 2026. This is why.\footnote{\href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{Link to the most recent version of this article:} \href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{\url{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}}}\\ \par
 \emph{Keywords: } Worst, date, format, ever, proof
 \end{abstract}
 
 % \tableofcontents
 
 \section{Introduction}
-Many people ask themselves, \emph{What is the best date}? While this might be subjective, this article argues that the date as displayed above (March 11) is clearly wrong, making it the worst of the common dates. Also called the \emph{`American absurdity'} \citep{redditor}, Month Day is widely recognised as the worst date format. That it is also objectively wrong is proven in this article.
+Many people ask themselves, \emph{What is the best date}? While answers may vary, as this might be subjective, within this article, the author proves that the date as displayed above (\emph{March 11}) \emph{is wrong}, making it the worst of the common dates. Also called the \emph{`American absurdity'} \citep{redditor}, Month Day is widely recognised as the worst date format. That it is also objectively wrong is proven in this article.
 
 \section{Proof}
 
@@ -131,6 +167,20 @@ We can confidently conclude that March 11 is not equivalent to today's date, whi
 
 
 \bibliography{library}
+
+
+
+
+
+
+% \vspace*{\fill}
+% \footnotesize{
+% \href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{Link to the most recent version.} \\
+% \href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{
+% \url{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}
+% }
+
+
 \end{document}
 
 % quelle: Vorlage https://canizo.org/templates#article_class
