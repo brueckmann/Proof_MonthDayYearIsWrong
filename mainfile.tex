@@ -1,14 +1,5 @@
-%
-% Paper title
-% Authors
-% 
-%-----------------------------------------------------------------
 
-\documentclass[12pt,longbibliography]{article}
-
-
-
-
+\documentclass[12pt]{article}
 
 % Packages
 %-----------------------------------------------------------------
@@ -21,14 +12,13 @@
 % http://tex.stackexchange.com/questions/664/why-should-i-use-usepackaget1fontenc
 \usepackage[T1]{fontenc}
 
+
 % Set type of paper and margins.
 \usepackage[a4paper, margin=2.7cm, % Set the size and margins of the paper
 includehead,
 nomarginpar,% We don't want any margin paragraphs
-textwidth=10cm,% Set \textwidth to 10cm
 headheight=10mm,% Set \headheight to 10mm
 ]{geometry}
-
 
 
 
@@ -43,10 +33,17 @@ headheight=10mm,% Set \headheight to 10mm
 \usepackage{graphicx, xcolor}
 \usepackage{placeins}
 \usepackage{fancyhdr}
+% Source - https://tex.stackexchange.com/a/13407
+% Posted by lockstep, modified by community. See post 'Timeline' for change history
+% Retrieved 2026-03-11, License - CC BY-SA 3.0
+
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+
+%Styling
+\setlength{\parindent}{0em} 
 
 
-
-
+% Uncomment for line numbers
 % \usepackage{lineno}
 % \linenumbers
 
@@ -57,7 +54,7 @@ headheight=10mm,% Set \headheight to 10mm
 % the paper URL specified in the bibtex file. It also uses natbib,
 % which cites papers by name such as Euler (1770) instead of [17].
 
-\usepackage{breakurl}
+
 \usepackage{natbib}
 \usepackage{url}
 \bibliographystyle{apalike}
@@ -66,27 +63,24 @@ headheight=10mm,% Set \headheight to 10mm
 
 
 
-
-
-
 % Shortcuts
 %-----------------------------------------------------------------
-
+% none defined at the moment.
 
 
 % Title, author, date
 %-----------------------------------------------------------------
 
 % If set, these will be the internal title and author of the PDF (and
-% will be listed for example in ereaders and tablets).
+% will be listed, for example, in ereaders and tablets.
 
-% \hypersetup{pdftitle={Title of the PDF}}
-% \hypersetup{pdfauthor={Author of the PDF}}
+\hypersetup{pdftitle={ProofMonthDayYearIsWrong}}
+\hypersetup{pdfauthor={Brueckmann}}
 
 
 % Paper title and author
 \title{Why the Month Day Format is not only absurd but also a wrong date format -- a proof by contradiction}
-\author{G. Brückmann}
+\author{\href{https://brueckmann.github.io/}{G. Brückmann}}
 
 % Date is set automatically unless specified below.
  \date{March 11, 2026}
@@ -112,20 +106,26 @@ headheight=10mm,% Set \headheight to 10mm
 \pagestyle{fancy}
 %... then configure it.
 \fancyhead{} % clear all header fields
-\fancyhead[RO,RE]{\textbf{G. Brückmann}}
-\fancyhead[RO,LE]{\textbf{Month Day is wrong}}
-
-\fancyfoot{} % clear all footer fields
-\fancyfoot[LE,RO]{\thepage}
-\fancyfoot[LO,CE]{\href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{Link to the most recent version:} \href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{\url{github/brueckmann/Proof_MonthDayYearIsWrong/blob/main/Proof_MonthDayYearIsWrong.pdf}}}
-% Some content:
+\lhead{G. Brückmann}
+\rhead{\textbf{Month Day is wrong}}
+\lfoot{\href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{Link to the most recent version of this article:} \href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{\url{github/brueckmann/Proof_MonthDayYearIsWrong/blob/main/Proof_MonthDayYearIsWrong.pdf}}}
+\rfoot{\thepage}
 
 
-\thispagestyle{fancy}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \renewcommand{\footrulewidth}{0.1mm}%
+\fancyfoot[L]{\href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{Link to the most recent version of this article:} \href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{\url{github/brueckmann/Proof_MonthDayYearIsWrong/blob/main/Proof_MonthDayYearIsWrong.pdf}}}
+  \fancyfoot[R]{\thepage}%
+  \renewcommand{\headrulewidth}{0mm}%
+} 
+
+
 \maketitle
 
 \begin{abstract}
-The date above is wrong. It is not a correct representation of the actual date, which is 2026-03-11, or the 11$^\text{th}$ of March, 2026. This is why.\footnote{\href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{Link to the most recent version of this article:} \href{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}{\url{https://raw.githubusercontent.com/brueckmann/Proof_MonthDayYearIsWrong/refs/heads/main/Proof_MonthDayYearIsWrong.pdf}}}\\ \par
+The date above is wrong. It is not a correct representation of the actual date, which is 2026-03-11, or the 11$^\text{th}$ of March, 2026. This is why. Therefore, please retire this date format so that we all have good dates.\\
+\par
 \emph{Keywords: } Worst, date, format, ever, proof
 \end{abstract}
 
@@ -137,20 +137,21 @@ Many people ask themselves, \emph{What is the best date}? While answers may vary
 \section{Proof}
 
 
-Assume 11$^{\text{th}}$ of March, 2026 is today's date, and let's agree this is correct. Let's also consider Mary, who (famously) has a little lamb (and disregard that we don't know how the lamb feels about being possessed by Mary). 
+Assume 11$^{\text{th}}$ of March, 2026 is today's date, and let's agree this is correct. Let's also consider Mary, who (famously) has a little lamb (and disregard that we don't know how the lamb feels about being possessed by Mary). \\
 
+Mary's little lamb implies the little lamb of Mary. Let's apply something similar to the correct date, the 11$^{\text{th}}$ of March, which, recall, is a true statement.\\ 
 
-If 11$^{\text{th}}$ of March is a true statement, so is the little lamb of Mary.
+\clearpage
 
-Let's rearrange: 
 
 \begin{align*} 
 \text{little lamb of Mary} &=  \text{Mary's little lamb} \\
-  \text{Mary's little lamb}  &= \text{little lamb of Mary}\\
+\text{Mary's little lamb}  &= \text{little lamb of Mary}\\
 11^{\text{th}}  \text{ of March} &=  \text{March's } 11^{\text{th}}\\
 \end{align*}
-\clearpage
-\text{Now, take the case of March 11 in order to prove by contradiction and suppose:} \\ 
+It becomes evident that the 11$^{\text{th}}$ of March is indeed the 11$^{\text{th}}$ (day) of March.\\
+
+Now, take the case of March 11 in order to prove by contradiction and suppose: \\ 
 \begin{align*}
 11^{\text{th}}  \text{ of March} &= \text{March } 11   \\ 
 \text{But as:} \\
@@ -172,6 +173,7 @@ We can confidently conclude that March 11 is not equivalent to today's date, whi
 
 
 
+\makeatletter\let\ps@plain\ps@fancy\makeatother % anywhere after the first page/chapter
 
 % \vspace*{\fill}
 % \footnotesize{
