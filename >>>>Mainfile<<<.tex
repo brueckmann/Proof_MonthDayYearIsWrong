@@ -1,0 +1,136 @@
+%
+% Paper title
+% Authors
+% 
+%-----------------------------------------------------------------
+
+\documentclass[12pt,longbibliography,draft]{article}
+
+% Packages
+%-----------------------------------------------------------------
+
+% Allow direct use of accents such as á é ñ.
+\usepackage[utf8]{inputenc}
+
+% This is a good idea to have some symbols included within the font
+% properly:
+% http://tex.stackexchange.com/questions/664/why-should-i-use-usepackaget1fontenc
+\usepackage[T1]{fontenc}
+
+% Set type of paper and margins.
+\usepackage[a4paper, margin=2.7cm]{geometry}
+
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+
+
+% Generate a PDF with hyperlinks in references.
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,breaklinks]{hyperref}
+
+
+\usepackage{graphicx, xcolor}
+\usepackage{placeins}
+
+\usepackage{lineno}
+\linenumbers
+
+% Bibliography
+%-----------------------------------------------------------------
+
+% This uses a bibliography style which hyperlinks the paper titles to
+% the paper URL specified in the bibtex file. It also uses natbib,
+% which cites papers by name such as Euler (1770) instead of [17].
+
+\usepackage{breakurl}
+\usepackage{natbib}
+\usepackage{url}
+\bibliographystyle{apalike}
+%\bibliographystyle{plainnat-linked}
+% \bibliographystyle{plain}
+
+% Shortcuts
+%-----------------------------------------------------------------
+
+
+
+% Title, author, date
+%-----------------------------------------------------------------
+
+% If set, these will be the internal title and author of the PDF (and
+% will be listed for example in ereaders and tablets).
+
+% \hypersetup{pdftitle={Title of the PDF}}
+% \hypersetup{pdfauthor={Author of the PDF}}
+
+
+% Paper title and author
+\title{Why Month Day is not only absurd but also wrong a wrong date format - a proof by contradiction}
+\author{G. Brückmann}
+
+% Date is set automatically unless specified below.
+ \date{March 11, 2026}
+ %It pains me to write it like this. 
+
+
+% Addresses. The "article" class does not have a standard way to
+% include them. This imitates the behaviour of "amsart" by inserting
+% them at the end of the paper.
+%-----------------------------------------------------------------
+
+% \AtEndDocument{\bigskip{\footnotesize
+%   \noindent
+%   \textsc{G. Brückmann. Please do not contact me because of this.}
+%   % \emph{E-mail address}: \texttt{\href{mailto:gracia.brueckmann@unibe.ch}{gracia.brueckmann@unibe.ch}}
+% }}
+
+% =========================================================================
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The data above is wrong. This is why.\\ \par
+\emph{Keywords: } Worst, date, format, ever, proof
+\end{abstract}
+
+% \tableofcontents
+
+\section{Introduction}
+Many people ask themselves, \emph{What is the best date}? While this might be subjective, this article argues that the date as displayed above (March 11) is clearly wrong, making it the worst of the common dates. Also called the \emph{`American absurdity'} \citep{redditor}, Month Day is widely recognised as the worst date format. That it is also objectively wrong is proven in this article.
+
+\section{Proof}
+
+
+Assume 11$^{\text{th}}$ of March, 2026 is today's date, and let's agree this is correct. Let's also consider Mary, who (famously) has a little lamb (and disregard that we don't know how the lamb feels about being possessed by Mary). 
+
+
+If 11$^{\text{th}}$ of March is a true statement, so is the little lamb of Mary.
+
+Let's rearrange: 
+
+\begin{align*} 
+\text{little lamb of Mary} &=  \text{Mary's little lamb} \\
+  \text{Mary's little lamb}  &= \text{little lamb of Mary}\\
+11^{\text{th}}  \text{ of March} &=  \text{March's } 11^{\text{th}}\\
+\end{align*}
+\clearpage
+\text{Now, take the case of March 11 in order to prove by contradiction and suppose:} \\ 
+\begin{align*}
+11^{\text{th}}  \text{ of March} &= \text{March } 11   \\ 
+\text{But as:} \\
+\text{little lamb of Mary} &\neq  \text{Mary little lamb}
+\end{align*}
+\hfill $\blacksquare$
+
+Given \emph{Mary little lamb} is so ambiguous that you may wonder if the author is under the influence, one can confidently refute the claim that March 11 is a valid date. 
+
+\section{Conclusion}
+ 
+We can confidently conclude that March 11 is not equivalent to today's date, which is 2026-03-11, the best date format IMHO, and \citeauthor{ISO8601} agrees with me. Given the proof in this paper, we should retire the Month Day Year date format, once and for all.
+
+
+
+\bibliography{library}
+\end{document}
+
+% quelle: Vorlage https://canizo.org/templates#article_class
